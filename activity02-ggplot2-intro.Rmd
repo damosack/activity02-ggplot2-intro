@@ -21,14 +21,14 @@ The `penguins` data set contains the following variables:
 
 All artwork by [@allison_horst](https://twitter.com/allison_horst).
 
-- `species`:
-- `island`:
-- `bill_length_mm`:
-- `bill_depth_mm`:
-- `flipper_length_mm`:
-- `body_mass_g`:
-- `sex`:
-- `year`:
+- `species`: penguin species
+- `island`: indicates island in the palmer Archipelago
+- `bill_length_mm`: bill length in mm
+- `bill_depth_mm`: bill depth in mm
+- `flipper_length_mm`: flipper length in mm
+- `body_mass_g`: body mass in grams
+- `sex`: penguin sex (m/f)
+- `year`: indicates the study year
 
 We will need to install `{palmerpenguins}` in your RStudio session to be able to use this.
 There are a couple of ways to do this, but my preferred method is to type the following in your **Console** pane (this should be the pane below this open `.Rmd` file).
@@ -114,13 +114,13 @@ For this boxplot, we want to double-encode the variable `species` to not only th
 In the code chunk below, add the missing code (i.e., replacing the `___`) to have our comparative boxplots also include some coloring.
 
 ```{r boxplot-colors}
-ggplot(data = penguins, mapping = aes(x = flipper_length_mm, y = species, ___ = ___)) +
+ggplot(data = penguins, mapping = aes(x = flipper_length_mm, y = species, fill = species)) +
   geom_boxplot()
 ```
 
 Now, comment on what you notice from these boxplots.
 
-**Response**:
+**Response**: The chinstrap and Adelie penguins tend to have shorter flipper lengths (and are more similar to each other) than Gentoo penguins. 
 
 
 Another way to visualize distributions are with points.
@@ -129,15 +129,15 @@ We can create something similar with jitterplots using `geom_jitter`.
 In the code chunk below, complete it so that it produces a jitterplot.
 
 ```{r jitterplot}
-ggplot(data = penguins, mapping = aes(x = flipper_length_mm, y = species, ___ = ___)) +
-  ___()
+ggplot(data = penguins, mapping = aes(x = flipper_length_mm, y = species, color = species)) +
+  geom_jitter()
 ```
 
 Comment on the strengths of the boxplot compared to the jitterplot and vice versa.
 That is, what can you easily determine by looking at the boxplot?
 What about the jitterplot?
 
-**Response**:
+**Response**: The jitter plot hides the raw data less, which can be considered a good practice, but in this case I don't think it's very valuable to be able to see individual observations. The summary statistics supplied by the boxplots seem like they're better for this exploratory phase. 
 
 
 Knit, stage, commit (with a meaningful commit message),and push everything in your **Git** pane to your GitHub repo.
