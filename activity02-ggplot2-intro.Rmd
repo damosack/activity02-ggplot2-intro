@@ -11,7 +11,7 @@ For the time being you can, "pay not attention to the code between lines 10 and 
 knitr::opts_chunk$set(error = TRUE)
 ```
 
-## Data and packages
+## Data and packages 
 
 Data were collected and made available by [Dr. Kristen Gorman](https://www.uaf.edu/cfos/people/faculty/detail/kristen-gorman.php) and the [Palmer Station, Antarctica LTER](https://pal.lternet.edu/) (a member of the [Long Term Ecological Research Network](https://lternet.edu/)).
 Drs. [Allison Horst](https://allisonhorst.github.io/) and [Alison Hill](https://alison.rbind.io/) packaged these data into [`{palmerpenguins}`](https://allisonhorst.github.io/palmerpenguins/).
